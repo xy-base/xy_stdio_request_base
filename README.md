@@ -16,6 +16,7 @@
 ## 安装
 
 ```bash
+# bash
 pip install xy_stdio_request_base
 ```
 
@@ -116,6 +117,7 @@ if __name__ == "__main__":
 ```
 
 ```bash
+# bash
 python main.py
 ```
 

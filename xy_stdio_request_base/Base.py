@@ -1,5 +1,5 @@
 # -*- coding: UTF-8 -*-
-__author__ = "yuyangit"
+__author__ = "余洋"
 __doc__ = "Base"
 """
   * @File    :   Base.py
@@ -31,15 +31,33 @@ from typing import TextIO
 
 
 class Base:
-    stdout: StreamWriter | TextIO | TextIOBase | StringIO | TextIOWrapper | StreamReader | None = (
-        sys.stdout
-    )
-    stderr: StreamWriter | TextIO | TextIOBase | StringIO | TextIOWrapper | StreamReader | None = (
-        sys.stderr
-    )
-    stdin: StreamWriter | TextIO | TextIOBase | StringIO | TextIOWrapper | StreamReader | None = (
-        sys.stdin
-    )
+    stdout: (
+        StreamWriter
+        | TextIO
+        | TextIOBase
+        | StringIO
+        | TextIOWrapper
+        | StreamReader
+        | None
+    ) = sys.stdout
+    stderr: (
+        StreamWriter
+        | TextIO
+        | TextIOBase
+        | StringIO
+        | TextIOWrapper
+        | StreamReader
+        | None
+    ) = sys.stderr
+    stdin: (
+        StreamWriter
+        | TextIO
+        | TextIOBase
+        | StringIO
+        | TextIOWrapper
+        | StreamReader
+        | None
+    ) = sys.stdin
     identifier = uuid4().hex
     seperate_line = ""
     closed = True
@@ -233,39 +251,52 @@ class Base:
     def _clean(self):
         self.closed = True
         try:
-            self.input_write_queue.task_done() if self.input_write_queue and isinstance(
-                self.input_write_queue, Queue
-            ) else ""
+            (
+                self.input_write_queue.task_done()
+                if self.input_write_queue and isinstance(self.input_write_queue, Queue)
+                else ""
+            )
         except:
             pass
         try:
-            self.input_read_queue.task_done() if self.input_read_queue and isinstance(
-                self.input_read_queue, Queue
-            ) else ""
+            (
+                self.input_read_queue.task_done()
+                if self.input_read_queue and isinstance(self.input_read_queue, Queue)
+                else ""
+            )
         except:
             pass
         try:
-            self.output_read_queue.task_done() if self.output_read_queue and isinstance(
-                self.output_read_queue, Queue
-            ) else ""
+            (
+                self.output_read_queue.task_done()
+                if self.output_read_queue and isinstance(self.output_read_queue, Queue)
+                else ""
+            )
         except:
             pass
         try:
-            self.output_write_queue.task_done() if self.output_write_queue and isinstance(
-                self.output_write_queue, Queue
-            ) else ""
+            (
+                self.output_write_queue.task_done()
+                if self.output_write_queue
+                and isinstance(self.output_write_queue, Queue)
+                else ""
+            )
         except:
             pass
         try:
-            self.error_read_queue.task_done() if self.error_read_queue and isinstance(
-                self.error_read_queue, Queue
-            ) else ""
+            (
+                self.error_read_queue.task_done()
+                if self.error_read_queue and isinstance(self.error_read_queue, Queue)
+                else ""
+            )
         except:
             pass
         try:
-            self.error_write_queue.task_done() if self.error_write_queue and isinstance(
-                self.error_write_queue, Queue
-            ) else ""
+            (
+                self.error_write_queue.task_done()
+                if self.error_write_queue and isinstance(self.error_write_queue, Queue)
+                else ""
+            )
         except:
             pass
         asyncio.set_event_loop(None)

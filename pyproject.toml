@@ -8,7 +8,7 @@ requires-python = ">=3.11.3"
 
 name = "xy_stdio_request_base"
 
-authors = [{ name = "yuyangit", email = "yuyangit.0515@qq.com" }]
+authors = [{ name = "余洋", email = "yuyangit.0515@qq.com" }]
 description = "xy_stdio_request_base 模块"
 
 dynamic = ["version"]

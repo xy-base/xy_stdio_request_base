@@ -1,5 +1,5 @@
 # -*- coding: UTF-8 -*-
-__author__ = "yuyangit"
+__author__ = "余洋"
 __doc__ = "client"
 """
   * @File    :   client.py
@@ -56,7 +56,7 @@ class ClientBase(Base):
                 universal_newlines=True,
             )
             if self.process:
-                self.stdin = self.process.stdin # type: ignore
+                self.stdin = self.process.stdin  # type: ignore
                 self.stdout = self.stdout_file
                 self.stderr = self.stderr_file
             else:

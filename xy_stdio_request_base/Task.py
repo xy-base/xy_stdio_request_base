@@ -1,5 +1,5 @@
 # -*- coding: UTF-8 -*-
-__author__ = "yuyangit"
+__author__ = "余洋"
 __doc__ = "Task"
 """
   * @File    :   Task.py
@@ -64,18 +64,12 @@ class Task:
     def __init__(
         self,
         arguments: str | bytes,
-        write_io: StreamWriter
-        | TextIO
-        | TextIOBase
-        | StringIO
-        | TextIOWrapper
-        | None = None,
-        read_io: TextIO
-        | TextIOBase
-        | StringIO
-        | TextIOWrapper
-        | StreamReader
-        | None = None,
+        write_io: (
+            StreamWriter | TextIO | TextIOBase | StringIO | TextIOWrapper | None
+        ) = None,
+        read_io: (
+            TextIO | TextIOBase | StringIO | TextIOWrapper | StreamReader | None
+        ) = None,
         identifier: str = uuid4().hex,
     ):
         self.write_io = write_io
@@ -122,20 +116,26 @@ class Task:
                 if isinstance(self.write_io, StreamWriter):
                     if self.encoding and isinstance(self.encoding, str):
                         self.write_io.write(arguments.encode(self.encoding))
-                        await self.write_io.drain() if hasattr(
-                            self.write_io, "drain"
-                        ) else None
+                        (
+                            await self.write_io.drain()
+                            if hasattr(self.write_io, "drain")
+                            else None
+                        )
                     else:
                         self.write_io.write(arguments.encode())
-                        await self.write_io.drain() if hasattr(
-                            self.write_io, "drain"
-                        ) else None
+                        (
+                            await self.write_io.drain()
+                            if hasattr(self.write_io, "drain")
+                            else None
+                        )
                 else:
                     if self.write_io.writable():
                         self.write_io.write(arguments)
-                        self.write_io.flush() if hasattr(
-                            self.write_io, "flush"
-                        ) else None
+                        (
+                            self.write_io.flush()
+                            if hasattr(self.write_io, "flush")
+                            else None
+                        )
             except Exception as exception:
                 logging.error(f"exception: {exception} write_io {self.write_io}")
                 pass
