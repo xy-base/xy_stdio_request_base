@@ -13,7 +13,7 @@ Standard IO wrappers.
 - <a href="https://github.com/xy-base/xy_stdio_request_base.git" target="_blank">Github</a>  
 - <a href="https://gitee.com/xy-base/xy_stdio_request_base.git" target="_blank">Gitee</a>
 
-## 安装
+## Installation
 
 ```bash
 # bash
