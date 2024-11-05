@@ -11,7 +11,8 @@
 ## 程式碼庫
 
 - <a href="https://github.com/xy-base/xy_stdio_request_base.git" target="_blank">Github位址</a>  
-- <a href="https://gitee.com/xy-base/xy_stdio_request_base.git" target="_blank">Gitee位址</a>
+- <a href="https://gitee.com/xy-opensource/xy_stdio_request_base.git" target="_blank">Gitee位址</a>  
+- <a href="https://gitcode.com/xy-opensource/xy_stdio_request_base.git" target="_blank">GitCode位址</a>  
 
 ## 安裝
 
