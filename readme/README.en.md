@@ -1,28 +1,30 @@
 # xy_stdio_request_base
 
-- [简体中文](README_zh_CN.md)
-- [繁体中文](README_zh_TW.md)
-- [English](README_en.md)
+- [简体中文](../README.md)
+- [繁體中文](README.zh-hant.md)
+- [English](README.en.md)
 
-## 说明
+## Description
 
-标准输入输出封装
+Standard IO wrappers.
 
-## 源码仓库
+## Source Code Repositories
 
-- <a href="https://github.com/xy-base/xy_stdio_request_base.git" target="_blank">Github地址</a>  
-- <a href="https://gitee.com/xy-opensource/xy_stdio_request_base.git" target="_blank">Gitee地址</a>
+- <a href="https://github.com/xy-base/xy_stdio_request_base.git" target="_blank">Github</a>  
+- <a href="https://gitee.com/xy-opensource/xy_stdio_request_base.git" target="_blank">Gitee</a>  
+- <a href="https://gitcode.com/xy-opensource/xy_stdio_request_base.git" target="_blank">GitCode</a>  
 
-## 安装
+## Installation
 
 ```bash
 # bash
 pip install xy_stdio_request_base
 ```
 
-## 使用
+## How to use
 
-###### python脚本
+###### python script
+
 
 ```python
 # main.py
@@ -121,18 +123,18 @@ if __name__ == "__main__":
 python main.py
 ```
 
-## 许可证
-xy_stdio_request_base 根据 <木兰宽松许可证, 第2版> 获得许可。有关详细信息，请参阅 [LICENSE](../LICENSE) 文件。
+## License
+xy_stdio_request_base is licensed under the <Mulan Permissive Software License，Version 2>. See the [LICENSE](../LICENSE) file for more info.
 
-## 捐赠
+## Donate
 
-如果小伙伴们觉得这些工具还不错的话，能否请咱喝一杯咖啡呢?  
+If you think these tools are pretty good, Can you please have a cup of coffee?  
 
-![Pay-Total](./Pay-Total.png)
+![Pay-Total](./Pay-Total.png)  
 
-## 联系方式
+## Contact
 
 ```
-微信: yuyangiit
-邮箱: yuyangit.0515@qq.com
+WeChat: yuyangiit
+Mail: yuyangit.0515@qq.com
 ```
